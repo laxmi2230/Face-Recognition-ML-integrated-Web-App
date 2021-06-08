@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS only -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}"
+    <title>Flask App</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="{{url_for('index')}}">
+            <img
+              src="{{url_for('static', filename='images/logo_name.png')}}"
+              alt=""
+              width="150"
+              height="30"
+            />
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNavAltMarkup"
+            aria-controls="navbarNavAltMarkup"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+              <a class="nav-link active" aria-current="page" href="{{url_for('index')}}">Home</a>
+              <a class="nav-link" href="{{url_for('faceapp')}}">Features</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+     {% block bodyblock %}
+
+    {% endblock %}
+    <footer class="footer">
+      <div class="container">
+        <img
+          src="{{url_for('static', filename='images/logo_blue.png')}}"
+          alt=""
+          width="230"
+          height="50"
+        />
+
+        <p align="center">
+          <span style="color: white"
+            >copyrights involved All rights reserved</span
+          >
+        </p>
+      </div>
+    </footer>
+
+    <style>
+      .footer {
+        position: fixed;
+        left: 0px;
+        bottom: 0;
+        width: 100%;
+        background-color: #002f4d;
+        padding-top: 40px;
+        padding-bottom: 20px;
+      }
+    </style>
+  </body>
+</html>

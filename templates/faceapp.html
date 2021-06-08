@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block bodyblock %}
+<div class="container">
+    <h3 class="content">Face Recognition application</h3>
+    <p class="content">
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Provident velit et, veniam nobis dolore dignissimos incidunt inventore quod quidem animi? Nemo recusandae dolorem quidem consectetur soluta repellendus omnis doloremque qui?
+    </p>
+    <img src="{{url_for('static', filename='images/002.PNG')}}" alt="image" width="600" height="230">
+    <div align="center">
+        <a href="{{url_for('gender')}}" class="btn btn-outline-primary">Try Now</a>
+    </div>
+</div>
+{% endblock %}
